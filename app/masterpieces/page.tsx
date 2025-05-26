@@ -18,7 +18,7 @@ export default function page() {
   return (
     <Page className="relative w-full overflow-clip pt-14 bg-neutral-900 text-primary">
       <Header
-        symbol="𓊣"
+        symbol="𓏞 𓎞 𓏟"
         title="Discover some of the Masterpieces of the Egyptian Museum"
         dark
         className="w-2/3 mx-auto mb-32"
