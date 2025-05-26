@@ -22,15 +22,6 @@ interface Photo {
 gsap.registerPlugin(ScrollTrigger);
 
 const SkewSlider = ({ images }: { images: Photo[] }) => {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useLayoutEffect(() => {
-    const checkScreenSize = () => setIsSmallScreen(window.innerWidth < 768);
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-    return () => window.removeEventListener("resize", checkScreenSize);
-  }, []);
-
   const containerRef = useRef<HTMLDivElement>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
   const imageRefs = useRef<HTMLDivElement[]>([]);
@@ -103,9 +94,9 @@ const SkewSlider = ({ images }: { images: Photo[] }) => {
         ref={sliderRef}
         className="flex h-full items-center gap-5 select-none px-[3vw] mt-[15vh]"
         style={{
-          width: isSmallScreen
-            ? `${images.length * 100 + 10}vw`
-            : `${images.length * 20 + 10}vw`,
+          width: `${
+            images.length * (window.innerWidth < 400 ? 100 : 20) + 10
+          }vw`,
         }}
       >
         {images.map((photo, idx) => (
@@ -138,9 +129,7 @@ const SkewSlider = ({ images }: { images: Photo[] }) => {
           </div>
         ))}
         <Link href="/masterpieces">
-          <Button className="w-52 h-52">
-            {isSmallScreen ? "true" : "false"}
-          </Button>
+          <Button className="w-52 h-52">See All</Button>
         </Link>
       </div>
     </div>
