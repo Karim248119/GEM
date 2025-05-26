@@ -88,7 +88,7 @@ export default function Ticket() {
         </div>
 
         {/* Text Section */}
-        <div className="flex-1 h-full flex flex-col justify-center gap-8 md:gap-12">
+        <div className="flex-1 h-full flex flex-col justify-center items-end gap-8 md:gap-12 text-end">
           <Typo className="text-primary text-4xl md:text-6xl">
             GEM Children Museum
           </Typo>

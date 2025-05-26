@@ -21,8 +21,8 @@ export default function Welcome() {
         >
           The Egyptian History <br /> in one place
         </Typo>
-        <div className="w-full px-14 absolute bottom-10 flex md:flex-row flex-col gap-10 items-center justify-between">
-          <div className=" text-primary/60 flex flex-col gap-2 text-xs">
+        <div className="w-full px-14 absolute bottom-10 flex md:flex-row flex-col gap-10 md:items-center justify-between">
+          <div className=" text-primary/60 flex flex-col gap-2 text-xs ">
             <Typo font="h2" className="text-lg capitalize text-primary">
               Daily except Saturdays and Wednesdays
             </Typo>

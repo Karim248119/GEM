@@ -7,6 +7,7 @@ import { PiArrowRightThin } from "react-icons/pi";
 import Dot from "./Dot";
 import { Button } from "./Button";
 import Link from "next/link";
+import { i } from "framer-motion/client";
 
 interface Photo {
   url: string;
@@ -21,6 +22,15 @@ interface Photo {
 gsap.registerPlugin(ScrollTrigger);
 
 const SkewSlider = ({ images }: { images: Photo[] }) => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useLayoutEffect(() => {
+    const checkScreenSize = () => setIsSmallScreen(window.innerWidth < 768);
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   const containerRef = useRef<HTMLDivElement>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
   const imageRefs = useRef<HTMLDivElement[]>([]);
@@ -86,13 +96,17 @@ const SkewSlider = ({ images }: { images: Photo[] }) => {
       ref={containerRef}
       className="relative overflow-hidden w-full h-[100vh] text-primary my-32"
     >
-      <Typo className="text-secondary text-center text-6xl mx-auto absolute top-[10vh] left-1/2 !-translate-x-1/2">
+      <Typo className="text-secondary w-full text-center md:text-6xl text-4xl mx-auto absolute top-[10vh] left-1/2 !-translate-x-1/2">
         Discover some of the Masterpieces of the Egyptian Museum
       </Typo>
       <div
         ref={sliderRef}
         className="flex h-full items-center gap-5 select-none px-[3vw] mt-[15vh]"
-        style={{ width: `${images.length * 20 + 10}vw` }}
+        style={{
+          width: isSmallScreen
+            ? `${images.length * 100 + 10}vw`
+            : `${images.length * 20 + 10}vw`,
+        }}
       >
         {images.map((photo, idx) => (
           <div
@@ -110,7 +124,7 @@ const SkewSlider = ({ images }: { images: Photo[] }) => {
             <img
               src={photo.url}
               alt={photo.title}
-              className="w-auto h-full object-cover"
+              className="md:w-auto w-screen h-full object-cover"
               style={{ width: `${widths[idx]}px` }}
             />
             <div className="flex items-end absolute top-0 bg-black/70 px-3 py-1 w-full h-full opacity-0 group-hover:opacity-100 duration-500">
@@ -124,7 +138,9 @@ const SkewSlider = ({ images }: { images: Photo[] }) => {
           </div>
         ))}
         <Link href="/masterpieces">
-          <Button className="w-52 h-52">View All</Button>
+          <Button className="w-52 h-52">
+            {isSmallScreen ? "true" : "false"}
+          </Button>
         </Link>
       </div>
     </div>
