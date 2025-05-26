@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes textUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-text {
+  animation: textUp 1s ease-out;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.arrowbtn:hover .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: moveToTopRight 1s infinite;
+}
+
+@keyframes moveToTopRight {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+/* hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.shape {
+  clip-path: polygon(49% 3%, 100% 50%, 13% 100%, 0 70%);
+}
+
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
+.hollow-shape {
+  clip-path: polygon(
+    0 63%,
+    15% 100%,
+    18% 100%,
+    3% 63%,
+    55% 4%,
+    95% 38%,
+    15% 100%,
+    19% 100%,
+    100% 38%,
+    55% 0
+  );
+}
+.hollow-shape2 {
+  clip-path: polygon(
+    0 63%,
+    15% 100%,
+    16% 100%,
+    1% 63%,
+    55% 1%,
+    97% 38%,
+    15% 100%,
+    17% 100%,
+    99% 38%,
+    55% 0
+  );
+}
