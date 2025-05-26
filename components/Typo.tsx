@@ -10,11 +10,13 @@ export default function Typo({
   children,
   font,
   direction = "bottom",
+  delay = 0,
 }: {
   className?: string;
   children: React.ReactNode;
   font?: "h1" | "h2" | "p" | "base";
   direction?: Direction;
+  delay?: number;
 }) {
   const fontClass =
     font === "h2"
@@ -57,7 +59,7 @@ export default function Typo({
     <motion.div
       initial={getInitialPosition(direction)}
       whileInView={getAnimatePosition(direction)}
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ duration: 1, ease: "easeOut", delay }}
       viewport={{ once: true, amount: 0.5 }}
       className={`
         ${fontClass} 

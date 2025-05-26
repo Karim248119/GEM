@@ -39,25 +39,25 @@ export default function Navbar() {
           <img
             src="/logo.png"
             alt="logo"
-            className="h-16 w-auto mix-blend-difference "
+            className="md:h-14 h-10 w-auto mix-blend-difference "
           />
         </div>
         <div className="absolute md:top-4 top-6 md:left-20 left-5 z-30">
           <img
             src="/logotext.png"
             alt="logo"
-            className="h-16 w-auto mix-blend-difference "
+            className="md:h-14 h-10 w-auto mix-blend-difference "
           />
         </div>
       </Link>
-      <div className="flex gap-10 items-center absolute top-5 right-20 z-50 mix-blend-difference">
+      <div className="flex md:gap-10 gap-2 items-center absolute top-5 md:right-20 right-3 z-50 mix-blend-difference">
         <button
-          className={`w-6 h-6 text-xs relative text-primary flex justify-center items-center duration-500 ${
+          className={`md:w-6 w-4 aspect-square md:text-xs text-[8px] relative text-primary flex justify-center items-center duration-500 ${
             isOpen && "opacity-0"
           }`}
         >
           <span className="w-full h-full border border-primary rotate-45 absolute top-0 left-0" />
-          <span className="-mt-1">ع</span>
+          <span className="-mt-1 ">ع</span>
         </button>
         <AnimatePresence>
           {showNavLinks && (
@@ -78,17 +78,21 @@ export default function Navbar() {
         </AnimatePresence>
 
         <button
-          className="flex md:w-20 z-50 w-12 h-10 flex-col gap-2 overflow-hidden group md:relative absolute top-3 right-4 md:top-0 md:right-0"
+          className="flex md:w-20 z-50 w-12 h-10 flex-col gap-2 overflow-hidden group relative"
           onClick={() => setIsOpen(!isOpen)}
         >
           <div
             className={`w-full h-[1px] origin-top bg-primary absolute z-40 top-4 left-0 duration-500 ${
-              isOpen ? "rotate-45" : "group-hover:left-5"
+              isOpen
+                ? "rotate-45 md:top-4 top-5 left-0"
+                : "md:group-hover:left-5"
             }`}
           />
           <div
-            className={`w-full h-[1px] z-50 bg-primary absolute bottom-4 left-0 duration-500  ${
-              isOpen ? "-rotate-45" : "group-hover:-left-5"
+            className={`w-full h-[1px] z-50 bg-primary absolute bottom-4  left-0 duration-500  ${
+              isOpen
+                ? "-rotate-45 md:bottom-4 bottom-5"
+                : "md:group-hover:-left-5"
             }`}
           />
         </button>
@@ -119,13 +123,14 @@ export default function Navbar() {
                       <Link
                         onClick={() => setIsOpen(false)}
                         href={link.href}
-                        className="overflow-hidden flex gap-10 items-center p-3"
+                        className="overflow-hidden flex md:gap-10 gap-5 items-center p-3"
                       >
                         <div className="font-light text-sm w-8 flex justify-center items-center aspect-square relative duration-300">
                           <div className="h-full aspect-square absolute -z-10 top-0 left-0 rotate-45 border border-secondary group-hover:bg-secondary duration-300" />
                           <span>{index + 1}</span>
                         </div>
                         <Typo
+                          direction="none"
                           font="h2"
                           className="md:text-6xl text-4xl capitalize text-nowrap"
                         >

@@ -1,7 +1,6 @@
 import React from "react";
 import Typo from "../Typo";
 import Dot from "../Dot";
-import Header from "../Header";
 
 const Items = [
   {
@@ -20,8 +19,8 @@ const Items = [
 
 export default function Cards() {
   return (
-    <div className="h-screen w-full flex flex-col gap-32 justify-center items-center text-primary mt-32 mb-16">
-      <div className="flex justify-center items-center gap-20">
+    <div className="md:h-screen w-full flex flex-col md:gap-32 gap-20 justify-center items-center text-primary mt-20 mb-16">
+      <div className="flex md:flex-row flex-col justify-center items-center md:gap-20 gap-10">
         {Items.map((item, index) => {
           return (
             <div
@@ -61,7 +60,9 @@ export default function Cards() {
           );
         })}
       </div>
-      <Header title="More than just a museum" gold />
+      <Typo className="md:text-6xl text-3xl text-center text-secondary px-5">
+        More than just a museum
+      </Typo>
     </div>
   );
 }

@@ -21,9 +21,9 @@ export default function page() {
         symbol="𓏞 𓎞 𓏟"
         title="Discover some of the Masterpieces of the Egyptian Museum"
         dark
-        className="w-2/3 mx-auto mb-32"
+        className="md:w-2/3 mx-auto md:mb-32 mt-10 px-5"
       />
-      <div className="grid grid-cols-2 gap-52 pb-52 p-5">
+      <div className="grid md:grid-cols-2 md:gap-52 gap-24 md:pb-52 pb-28 p-5">
         {rows.map((pair, rowIndex) => {
           const isEvenRow = rowIndex % 2 === 0;
           const orderedPair = isEvenRow ? pair : [pair[1], pair[0]];
@@ -38,7 +38,7 @@ export default function page() {
                   className={`h-auto object-contain ${
                     (isEvenRow && isFirst) || (!isEvenRow && !isFirst)
                       ? "w-full"
-                      : "w-1/2"
+                      : "md:w-1/2"
                   }
                   ${isEvenRow && !isFirst && "self-end"}
                   `}
@@ -52,14 +52,14 @@ export default function page() {
                       className="w-full object-contain !max-h-screen"
                     />
                     <div className="w-full h-full bg-black/0 group-hover:bg-neutral-900/80 absolute top-0 duration-300" />
-                    <button className="h-0 -rotate-45 group-hover:h-[15vh] arrowbtn overflow-hidden !aspect-square absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 border-2 border-secondary duration-500">
+                    <button className="h-0 opacity-0 -rotate-45 group-hover:h-[15vh] group-hover:opacity-100 arrowbtn overflow-hidden !aspect-square absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 border-2 border-secondary duration-500">
                       <div className="w-full h-full relative p-5 flex items-center justify-center">
                         <PiArrowRightThin className="arrow text-5xl" />
                       </div>
                     </button>
                   </div>
                   <div className="flex gap-3 absolute mt-2">
-                    <Dot width={14} className="mt-3" />
+                    <Dot className="md:mt-3 mt-2 aspect-square" />
                     <Typo className="text-lg md:text-4xl text-wrap ">
                       {img.title}
                     </Typo>

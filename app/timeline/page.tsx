@@ -286,7 +286,11 @@ const data = [
 export default function page() {
   return (
     <Page className="relative w-full overflow-clip pt-14 bg-primary">
-      <Header symbol="𓋖" title="Over a 5000 years of history" />
+      <Header
+        symbol="𓋖 𓋙 𓋚"
+        title="Over a 5000 years of history"
+        className="md:w-2/3 mx-auto mt-10 px-5"
+      />
       <Timeline data={data} />
     </Page>
   );

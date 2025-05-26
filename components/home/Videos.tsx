@@ -100,7 +100,7 @@ export default function Videos() {
   };
 
   return (
-    <div className="h-screen w-full flex relative my-32">
+    <div className="h-screen w-full md:flex relative my-32 hidden">
       <div
         className={`h-full w-full absolute top-0 left-0 p-10 flex flex-col items-center z-20 pointer-events-none duration-500 ${
           selected === null ? "opacity-100" : "opacity-0"

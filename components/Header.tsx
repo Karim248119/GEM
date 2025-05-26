@@ -16,9 +16,15 @@ export default function Header({
 }) {
   return (
     <div className={className}>
-      <Typo className="text-[10vw] text-secondary text-center"> {symbol}</Typo>
       <Typo
-        className={`text-lg md:text-7xl mx-auto text-center mb-10 ${
+        delay={1}
+        className="md:text-[10vw] text-[15vw] text-secondary text-center"
+      >
+        {symbol}
+      </Typo>
+      <Typo
+        delay={1.5}
+        className={`text-xl md:text-7xl mx-auto text-center mb-10 ${
           gold ? "text-secondary" : dark ? "text-primary" : "text-neutral-800"
         }`}
       >
