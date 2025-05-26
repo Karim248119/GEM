@@ -1,6 +1,5 @@
 import React from "react";
 import { Timeline } from "@/components/Timeline";
-import Typo from "@/components/Typo";
 import Header from "@/components/Header";
 import Page from "@/components/Page";
 import { TimelineData } from "@/data/timeline";
