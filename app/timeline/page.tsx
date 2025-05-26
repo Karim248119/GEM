@@ -4,7 +4,7 @@ import Typo from "@/components/Typo";
 import Header from "@/components/Header";
 import Page from "@/components/Page";
 
-export function TimelineDemo() {
+export default function page() {
   const data = [
     {
       title: "CA 4000 - 2686 BC",
@@ -294,5 +294,3 @@ export function TimelineDemo() {
     </Page>
   );
 }
-
-export default TimelineDemo;
