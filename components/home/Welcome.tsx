@@ -7,17 +7,24 @@ export default function Welcome() {
   return (
     <div>
       <img
+        src="https://cdn.hassanallam.com/app/uploads/2022/08/DJI_0999.jpg"
+        className="fixed w-full h-screen object-cover brightness-50"
+        // autoPlay
+        // loop
+        // muted
+      />
+      {/* <img
         src="/ramses.png"
         alt=""
         className="md:h-[90vh] md:w-auto w-[95vw] m-auto absolute md:top-[5vh] top-[10vh] left-1/2 -translate-x-1/2 brightness-75 z-10"
       />
       <div className="absolute md:top-0 top-[10vh] left-1/2 -translate-x-1/2 md:h-[95vh] md:w-auto w-[95vw] aspect-square bg-secondary flex justify-center items-center shape">
         <div className="h-[calc(100%-4px)] aspect-square bg-neutral-900 flex justify-center items-center shape" />
-      </div>
+      </div> */}
       <div className="w-full md:h-screen h-[115vh] relative justify-center items-center">
         <Typo
           delay={1.5}
-          className="z-10 absolute top-[45vh] md:left-[20vw] md:w-[60vw] lef-[5vw] w-[90vw] text-primary md:text-9xl text-4xl text-center text-nowrap"
+          className="z-10 absolute top-[30vh] md:left-[20vw] md:w-[60vw] lef-[5vw] w-[90vw] text-primary md:text-9xl text-4xl text-center text-nowrap"
         >
           The Egyptian History <br /> in one place
         </Typo>
@@ -38,6 +45,10 @@ export default function Welcome() {
               <Dot width={8} />
               <p>Last ticket purchase: 5 PM</p>
             </div>
+          </div>
+          <div className="w-8 h-8 relative flex justify-center items-center">
+            <div className="w-full h-full border rotate-45 absolute top-0 left-0 border-primary" />
+            <div className="w-1 h-1 rounded-full bg-primary animate-customBounce" />
           </div>
           <div className=" text-primary/60 flex flex-col gap-2 text-sm">
             <Typo font="h2" className="text-lg capitalize text-primary">

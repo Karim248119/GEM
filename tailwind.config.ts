@@ -15,6 +15,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        customBounce: {
+          "0%, 100%": { transform: "translateY(10px)", opacity: "0" },
+          "50%": { transform: "translateY(-5px)", opacity: "1" }, // increase to -30px or more for higher bounce
+        },
+      },
+      animation: {
+        customBounce: "customBounce 2s linear infinite",
+      },
     },
   },
   plugins: [],

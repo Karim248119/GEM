@@ -13,10 +13,12 @@ export default function Home() {
   return (
     <Page className="w-full h-full relative bg-neutral-900">
       <Welcome />
-      <Cards />
-      <Videos />
-      <Ticket />
-      <SkewSlider images={Items} />
+      <div className="bg-neutral-900 relative z-20">
+        <Cards />
+        <Videos />
+        <Ticket />
+        <SkewSlider images={Items} />
+      </div>
     </Page>
   );
 }
