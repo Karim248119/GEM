@@ -1,11 +1,8 @@
-import Dot from "@/components/Dot";
-import Header from "@/components/Header";
 import Cards from "@/components/home/Cards";
 import Ticket from "@/components/home/Ticket";
 import Welcome from "@/components/home/Welcome";
 import { Items } from "@/data";
 import SkewSlider from "@/components/SkewSlider";
-import Footer from "@/components/home/Footer";
 import Videos from "@/components/home/Videos";
 import Page from "@/components/Page";
 

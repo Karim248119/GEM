@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavTransition from "@/components/NavTransition";
 import ReactLenis from "lenis/react";
-import Footer from "@/components/home/Footer";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Nav";
 import { Fonts } from "@/lib/fonts";
 import PageTransition from "@/components/PageTransition";

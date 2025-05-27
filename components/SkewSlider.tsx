@@ -80,11 +80,12 @@ const SkewSlider = ({ images }: { images: Photo[] }) => {
 
     return () => ctx.revert();
   }, []);
-
+  const isClient = typeof window !== "undefined";
+  const widthMultiplier = isClient && window.innerWidth < 400 ? 100 : 20;
   return (
     <div
       ref={containerRef}
-      className="relative overflow-hidden w-full h-[100vh] text-primary my-32"
+      className="relative overflow-hidden w-full h-[100vh] text-primary py-32"
     >
       <Typo className="text-secondary w-full text-center md:text-6xl text-4xl mx-auto absolute top-[10vh] left-1/2 !-translate-x-1/2">
         Discover some of the Masterpieces of the Egyptian Museum
@@ -93,9 +94,7 @@ const SkewSlider = ({ images }: { images: Photo[] }) => {
         ref={sliderRef}
         className="flex h-full items-center gap-5 select-none px-[3vw] mt-[15vh]"
         style={{
-          width: `${
-            images.length * (window.innerWidth < 400 ? 100 : 20) + 10
-          }vw`,
+          width: `${images.length * widthMultiplier + 10}vw`,
         }}
       >
         {images.map((photo, idx) => (
