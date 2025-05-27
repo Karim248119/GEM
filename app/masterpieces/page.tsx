@@ -1,3 +1,4 @@
+import Div from "@/components/Div";
 import Dot from "@/components/Dot";
 import Header from "@/components/Header";
 import Img from "@/components/Img";
@@ -17,10 +18,20 @@ export default function page() {
 
   return (
     <Page className="relative w-full overflow-clip pt-14 bg-neutral-900 text-primary">
+      <div className="w-full h-[50vh] relative">
+        <img
+          src="/ni2.png"
+          alt=""
+          className="md:h-[50vh] md:w-auto w-[95vw] m-auto absolute md:top-[0vh] top-[5vh] left-1/2 -translate-x-1/2 brightness-75 z-10"
+        />
+        <div className="absolute md:top-0 top-[5vh] left-1/2 -translate-x-1/2 md:h-full md:w-auto w-[95vw] aspect-square bg-secondary flex justify-center items-center shape">
+          <div className="h-[calc(100%-4px)] aspect-square bg-neutral-900 flex justify-center items-center shape" />
+        </div>
+      </div>
       <Header
-        symbol="𓏞 𓎞 𓏟"
+        // symbol="𓏞 𓎞 𓏟"
         title="Discover some of the Masterpieces of the Egyptian Museum"
-        dark
+        gold
         className="md:w-2/3 mx-auto md:mb-32 mt-10 px-5"
       />
       <div className="grid md:grid-cols-2 md:gap-52 gap-24 md:pb-52 pb-28 p-5">
@@ -58,12 +69,15 @@ export default function page() {
                       </div>
                     </button>
                   </div>
-                  <div className="flex gap-3 absolute mt-2">
+                  <Div className="flex gap-3 absolute mt-2">
                     <Dot className="md:mt-3 mt-2 aspect-square" />
-                    <Typo className="text-lg md:text-4xl text-wrap ">
+                    <Typo
+                      direction="none"
+                      className="text-lg md:text-4xl text-wrap "
+                    >
                       {img.title}
                     </Typo>
-                  </div>
+                  </Div>
                 </div>
               </div>
             );

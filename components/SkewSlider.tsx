@@ -7,7 +7,6 @@ import { PiArrowRightThin } from "react-icons/pi";
 import Dot from "./Dot";
 import { Button } from "./Button";
 import Link from "next/link";
-import { i } from "framer-motion/client";
 
 interface Photo {
   url: string;

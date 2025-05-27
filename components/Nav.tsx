@@ -10,7 +10,7 @@ export default function Navbar() {
     { text: "Home", href: "/" },
     { text: "Master Pieces", href: "/masterpieces" },
     { text: "Time Line", href: "/timeline" },
-    { text: "Contact", href: "/#contact" },
+    { text: "Contact", href: "#contact" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +50,11 @@ export default function Navbar() {
           />
         </div>
       </Link>
-      <div className="flex md:gap-10 gap-2 items-center absolute top-5 md:right-20 right-3 z-50 mix-blend-difference">
+      <div
+        className={`flex md:gap-10 gap-2 items-center top-5 md:right-20 right-3 z-50 mix-blend-difference ${
+          isOpen ? "fixed" : "absolute"
+        }`}
+      >
         <button
           className={`md:w-6 w-4 aspect-square md:text-xs text-[8px] relative text-primary flex justify-center items-center duration-500 ${
             isOpen && "opacity-0"

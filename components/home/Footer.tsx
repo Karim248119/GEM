@@ -28,9 +28,12 @@ const Contacts = [
 
 export default function Footer() {
   return (
-    <div className="h-[50vh] w-full bg-neutral-900 text-primar grid md:grid-cols-3 md:grid-rows-1 grid-rows-2 md:px-20">
+    <footer
+      id="contact"
+      className="h-[50vh] w-full bg-neutral-900 text-primar grid md:grid-cols-3 md:grid-rows-1 grid-rows-2 md:px-20"
+    >
       <div className=" h-full w-full md:p-10 p-5 space-y-4 md:col-span-2 text-primary text-sm md:text-base">
-        <Typo direction="none" className="text-5xl md:text-9xl">
+        <Typo direction="none" className="text-5xl md:text-9xl text-secondary">
           Contact us
         </Typo>
         <div className="flex items-center gap-1">
@@ -73,6 +76,6 @@ export default function Footer() {
           © 2025 All rights reserved. GEM
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

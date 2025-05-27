@@ -286,8 +286,19 @@ const data = [
 export default function page() {
   return (
     <Page className="relative w-full overflow-clip pt-14 bg-primary">
+      <div className="w-full h-[50vh] relative">
+        <img
+          src="/anubis.png"
+          alt=""
+          className="md:h-[50vh] md:w-auto w-[95vw] m-auto absolute md:top-[0vh] top-[5vh] left-1/2 -translate-x-1/2 brightness-75 z-10"
+        />
+        <div className="absolute md:top-0 top-[5vh] left-1/2 -translate-x-1/2 md:h-full md:w-auto w-[95vw] aspect-square bg-secondary flex justify-center items-center shape">
+          <div className="h-[calc(100%-4px)] aspect-square bg-primary flex justify-center items-center shape" />
+        </div>
+      </div>
       <Header
-        symbol="𓋖 𓋙 𓋚"
+        // symbol="𓋖 𓋙 𓋚"
+        gold
         title="Over a 5000 years of history"
         className="md:w-2/3 mx-auto mt-10 px-5"
       />

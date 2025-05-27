@@ -8,15 +8,15 @@ import Typo from "../Typo";
 const Vids = [
   {
     title: "The Grand Stairway",
-    url: "https://pixeldrain.com/api/file/L8rDiWqD",
+    url: "https://firebasestorage.googleapis.com/v0/b/fir-7542d.appspot.com/o/vids%2FGrand%20Stairway%20at%20Grand%20Egyptian%20Museum%20-%20Alan%20Boyle%20(1080p%2C%20h264).mp4?alt=media&token=a6fadc17-41d1-43d1-ad18-258baade169e",
   },
   {
     title: "Tutankhamun Immersive Exhibition",
-    url: "https://pixeldrain.com/api/file/HNUL9jPn",
+    url: "https://firebasestorage.googleapis.com/v0/b/fir-7542d.appspot.com/o/vids%2FTutankhamun%20Immersive%20Exhibition.mp4?alt=media&token=682484b2-7ab6-4490-8c4b-4c78979fecd1",
   },
   {
     title: "The Official GEM Shop",
-    url: "https://pixeldrain.com/api/file/vPmYmc7s",
+    url: "https://firebasestorage.googleapis.com/v0/b/fir-7542d.appspot.com/o/vids%2FThe%20Official%20GEM%20Shop%20-%20Grand%20Egyptian%20Museum%20(1080p%2C%20h264).mp4?alt=media&token=72d3287f-66f6-4918-a298-f7410298be57",
   },
 ];
 
