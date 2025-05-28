@@ -46,7 +46,7 @@ export default function Welcome() {
               <p>Last ticket purchase: 5 PM</p>
             </div>
           </div>
-          <div className="w-8 h-8 relative flex justify-center items-center">
+          <div className="w-8 h-8 relative md:flex hidden justify-center items-center">
             <div className="w-full h-full border rotate-45 absolute top-0 left-0 border-primary" />
             <div className="w-1 h-1 rounded-full bg-primary animate-customBounce" />
           </div>
