@@ -10,6 +10,7 @@ export default function Navbar() {
     { text: "Home", href: "/" },
     { text: "Master Pieces", href: "/masterpieces" },
     { text: "Time Line", href: "/timeline" },
+    // { text: "Quick Tour", href: "/tour" },
     { text: "Contact", href: "#contact" },
   ];
 
@@ -31,7 +32,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <>
+    <div>
       <AnimatePresence>
         {showNavLinks && (
           <motion.div
@@ -39,7 +40,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="flex md:gap-10 gap-2 items-center top-5 md:right-20 right-3 z-50 mix-blend-difference fixed "
+            className="flex md:gap-10 gap-2 items-center top-5 md:right-20 right-3 z-40 mix-blend-difference absolute"
           >
             <Link href="/">
               <div className="mix-blend-difference  fixed md:top-4 top-6 md:left-20 left-5 z-30">
@@ -68,7 +69,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="flex md:gap-10 gap-2 items-center top-5 md:right-20 right-3 z-50 mix-blend-difference fixed "
+            className="flex md:gap-10 gap-2 items-center top-5 md:right-20 right-3 z-40 mix-blend-difference fixed "
           >
             <button
               className={`md:w-6 w-4 aspect-square md:text-xs text-[8px] relative text-primary flex justify-center items-center duration-500 ${
@@ -94,7 +95,7 @@ export default function Navbar() {
             </motion.div>
 
             <button
-              className="flex md:w-20 z-50 w-12 h-10 flex-col gap-2 overflow-hidden group relative"
+              className="flex md:w-20 z-40 w-12 h-10 flex-col gap-2 overflow-hidden group relative"
               onClick={() => setIsOpen(!isOpen)}
             >
               <div
@@ -105,7 +106,7 @@ export default function Navbar() {
                 }`}
               />
               <div
-                className={`w-full h-[1px] z-50 bg-primary absolute bottom-4  left-0 duration-500  ${
+                className={`w-full h-[1px] z-40 bg-primary absolute bottom-4  left-0 duration-500  ${
                   isOpen
                     ? "-rotate-45 md:bottom-4 bottom-5"
                     : "md:group-hover:-left-5"
@@ -122,8 +123,8 @@ export default function Navbar() {
         }`}
       >
         <div className="w-full h-full flex md:flex-row flex-col relative">
-          <div className="flex gap-10 md:w-3/4 w-full md:h-full h-3/4 justify-center items-center md:flex-row flex-col ">
-            <div className="flex flex-col gap-5 text-primary">
+          <div className="flex md:gap-10 gap-5 md:w-3/4 w-full md:h-full h-3/4 justify-center items-center md:flex-row flex-col ">
+            <div className="flex flex-col md:gap-5 gap-3 text-primary">
               <AnimatePresence>
                 {isOpen &&
                   Links.map((link, index) => (
@@ -151,7 +152,7 @@ export default function Navbar() {
                         <Typo
                           direction="none"
                           font="h2"
-                          className="md:text-6xl text-4xl capitalize text-nowrap"
+                          className="md:text-6xl text-3xl capitalize text-nowrap"
                         >
                           {link.text}
                         </Typo>
@@ -189,6 +190,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

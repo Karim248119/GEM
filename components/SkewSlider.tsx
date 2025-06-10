@@ -87,7 +87,7 @@ const SkewSlider = ({ images }: { images: Photo[] }) => {
       ref={containerRef}
       className="relative overflow-hidden w-full h-[100vh] text-primary py-32"
     >
-      <Typo className="text-secondary w-full text-center md:text-6xl text-4xl mx-auto absolute top-[10vh] left-1/2 !-translate-x-1/2">
+      <Typo className="text-secondary px-5 w-full md:w-2/3 text-center md:text-6xl text-4xl mx-auto absolute top-[10vh] left-1/2 !-translate-x-1/2">
         Discover some of the Masterpieces of the Egyptian Museum
       </Typo>
       <div
