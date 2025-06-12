@@ -21,10 +21,9 @@ export default function page() {
     <Page className="relative w-full overflow-clip pt-14 bg-neutral-900 text-primary">
       <div>
         <Header
-          imgurl="/ni2.png"
+          imgurl="/tkt.webp"
           title="The Treasures of Ancient Egypt"
           dark
-          className="md:w-2/3 mx-auto md:mb-32 mt-10 px-5"
         />
       </div>
       {/* <div className="grid md:grid-cols-2 md:gap-52 gap-24 md:pb-52 pb-28 p-5">

@@ -2,6 +2,7 @@ import React from "react";
 import Typo from "../Typo";
 import { Button } from "../Button";
 import Div from "../Div";
+import Link from "next/link";
 
 const animationValue = 1000;
 
@@ -33,7 +34,9 @@ export default function Ticket() {
             You can choose to embark on this journey at your own pace or through
             a 90-minute guided tour.
           </Typo>
-          <Button>BOOK YOUR TICKET</Button>
+          <Link href="/AdmissionTkt">
+            <Button>BOOK YOUR TICKET</Button>
+          </Link>
         </div>
 
         {/* Image Section */}
