@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Nav";
 import { Fonts } from "@/lib/fonts";
 import PageTransition from "@/components/PageTransition";
+import LenisProvider from "@/components/LenisProvider";
+import Preloader from "@/components/Preload";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "GEM",
@@ -22,14 +25,16 @@ export default function RootLayout({
       <body
         className={`${Fonts.base.className} antialiased bg-neutral-900 text-neutral-600`}
       >
-        <NavTransition />
-        <PageTransition>
-          <ReactLenis root>
-            <Navbar />
-            {children}
-            <Footer />
-          </ReactLenis>
-        </PageTransition>
+        <Suspense fallback={null}>
+          <PageTransition>
+            <LenisProvider>
+              <Preloader>
+                <Navbar />
+                {children}
+              </Preloader>
+            </LenisProvider>
+          </PageTransition>
+        </Suspense>
       </body>
     </html>
   );

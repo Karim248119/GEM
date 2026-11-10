@@ -20,7 +20,13 @@ export default function TktLayout({
   return (
     <Page className="relative w-full pt-8 pb-12 bg-primary">
       <div>
-        <Header title="GEM Ticket" imgurl="/ni2.png" className="text-nowrap" />
+        <Header
+          title="GEM Ticket"
+          subtitle="Book Now"
+          imgurl="/cleopatra.png"
+          imgClassName="scale-x-[-1] md:h-[60vh]"
+          className="text-nowrap !text-neutral-900"
+        />
       </div>
       <div className="flex gap-2 items-center justify-center">
         {Array.from({ length: 5 }, (_, i) => (

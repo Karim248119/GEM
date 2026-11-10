@@ -9,7 +9,7 @@ export default function Navbar() {
   const Links = [
     { text: "Home", href: "/" },
     { text: "Master Pieces", href: "/masterpieces" },
-    { text: "Time Line", href: "/timeline" },
+    { text: "Time Line", href: "/dynasties" },
     // { text: "Quick Tour", href: "/tour" },
     { text: "Contact", href: "#contact" },
   ];
@@ -17,20 +17,20 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showNavLinks, setShowNavLinks] = useState(true);
   const prevScrollY = useRef(0);
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.pageYOffset;
-      if (currentScrollY < prevScrollY.current) {
-        setShowNavLinks(true);
-      } else {
-        setShowNavLinks(false);
-      }
-      prevScrollY.current = currentScrollY;
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollY = window.pageYOffset;
+  //     if (currentScrollY < prevScrollY.current) {
+  //       setShowNavLinks(true);
+  //     } else {
+  //       setShowNavLinks(false);
+  //     }
+  //     prevScrollY.current = currentScrollY;
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
   return (
     <div>
       <AnimatePresence>

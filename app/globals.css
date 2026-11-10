@@ -90,7 +90,10 @@ html.lenis body {
 }
 
 .shape {
-  clip-path: polygon(49% 3%, 100% 50%, 13% 100%, 0 70%);
+  clip-path: polygon(45% 0%, 85% 40%, 10% 100%, 0 70%);
+}
+.shape2 {
+  clip-path: polygon(50% 3%, 100% 50%, 20% 100%, 0 70%);
 }
 
 .no-scroll {
@@ -158,3 +161,73 @@ html.lenis body {
     transform: rotateY(360deg) rotateX(30deg);
   }
 }
+
+/* grain*/
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.bg:after {
+  animation: grain 8s steps(10) infinite;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  content: "";
+  height: 300%;
+  width: 300%;
+  left: -100%;
+  top: -110%;
+  opacity: 0.8;
+  position: fixed;
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(5%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(5%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+.text-outline {
+  text-shadow:
+    -0.5px -0.5px 0 var(---gold),
+    0.5px -0.5px 0 var(---gold),
+    -0.5px 0.5px 0 var(---gold),
+    0.5px 0.5px 0 var(---gold);
+}
+
+/* style={{
+  WebkitTextStrokeWidth: isOpen ? "0" : "0.01px",
+  WebkitTextStrokeColor: "black",
+}} */

@@ -55,7 +55,10 @@ export default function Pyramid() {
           className="lg:h-[60vh] h-[100vh] overflow-hidden relative"
         >
           <div className="absolute top-0 left-0 lg:w-1/2 h-full flex flex-col lg:justify-center justify-end items-center lg:items-start lg:px-20 px-5 lg:gap-10 gap-5 lg:mt-10 -mt-20">
-            <Typo className="lg:text-5xl text-3xl lg:text-start text-center text-secondary">
+            <Typo
+              font="h1"
+              className="lg:text-5xl text-3xl lg:text-start text-center text-secondary"
+            >
               {Items[current].title}
             </Typo>
             <Typo font="p">
@@ -95,10 +98,10 @@ export default function Pyramid() {
                     idx === 0
                       ? `-${time * 0.75}s`
                       : idx === 1
-                      ? `0s`
-                      : idx === 2
-                      ? `-${time * 0.25}s`
-                      : `-${time * 0.5}s`,
+                        ? `0s`
+                        : idx === 2
+                          ? `-${time * 0.25}s`
+                          : `-${time * 0.5}s`,
                 }}
               >
                 <img

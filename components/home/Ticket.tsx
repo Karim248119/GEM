@@ -13,7 +13,7 @@ export default function Ticket() {
       <div className="w-full min-h-screen py-10 grid grid-cols-1 md:grid-cols-2 items-center px-6 md:px-10 gap-12">
         {/* Text Section */}
         <div className="flex-1 h-full flex flex-col justify-center gap-8 md:gap-12 md:order-none order-2">
-          <Typo className="text-primary text-4xl md:text-6xl">
+          <Typo font="h1" className="text-primary text-4xl md:text-6xl">
             GEM Main Galleries
           </Typo>
           <Typo

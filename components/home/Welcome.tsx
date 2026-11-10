@@ -27,15 +27,13 @@ export default function Welcome() {
   }, []);
   return (
     <div className="w-full h-[130vh] relative" ref={heroRef}>
-      <motion.img
-        src="https://cdn.hassanallam.com/app/uploads/2022/08/DJI_0999.jpg"
-        initial={{ scale: 3 }}
-        animate={{ scale: 1 }}
-        transition={{
-          delay: 1.5,
-          duration: 4,
-          ease: [0.22, 1, 0.36, 1],
-        }}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        // src="https://www.pexels.com/download/video/32537471/"
+        src="https://www.pexels.com/download/video/32537396/"
         className="absolute top-0 w-full h-screen object-cover brightness-50 z-0"
       />
 
@@ -46,8 +44,9 @@ export default function Welcome() {
       >
         <div className="w-full md:h-screen h-[115vh] relative justify-center items-center">
           <Typo
+            font="h1"
             delay={1.5}
-            className="z-10 absolute top-[30vh] md:left-[20vw] md:w-[60vw] lef-[5vw] w-[90vw] text-primary md:text-9xl text-4xl text-center text-nowrap"
+            className="z-10 absolute top-[30vh] md:left-[20vw] md:w-[60vw] lef-[5vw] w-[90vw] text-secondary md:text-9xl text-4xl text-center text-nowrap"
           >
             The Egyptian History <br /> in one place
           </Typo>

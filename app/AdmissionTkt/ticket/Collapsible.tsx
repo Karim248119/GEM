@@ -1,4 +1,5 @@
 "use client";
+import Typo from "@/components/Typo";
 import { TicketData } from "@/data/ticket";
 import React, { useEffect, useRef, useState } from "react";
 import { PiMinus, PiPlus } from "react-icons/pi";
@@ -76,17 +77,15 @@ const CollapseItem = ({
         className="w-full flex justify-between gap-2 items-center md:py-5 px-2 md:h-auto h-20"
       >
         <div className="flex items-center gap-3">
-          <h2
-            className={`capitalize md:text-3xl font-extrabold !font-sans ${
-              isOpen ? "text-secondary" : "text-outline text-transparent"
+          <Typo
+            font="h2"
+            direction="none"
+            className={`capitalize md:text-3xl font-bold ${
+              isOpen ? "text-secondary" : "text-neutral-900/50"
             }`}
-            style={{
-              WebkitTextStrokeWidth: isOpen ? "0" : "1px",
-              WebkitTextStrokeColor: "black",
-            }}
           >
             {title}
-          </h2>
+          </Typo>
         </div>
         <div className=" relative md:w-8 w-5 aspect-square flex justify-center items-center">
           <div

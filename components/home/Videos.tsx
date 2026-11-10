@@ -8,15 +8,15 @@ import Typo from "../Typo";
 const Vids = [
   {
     title: "The Grand Stairway",
-    url: "https://firebasestorage.googleapis.com/v0/b/fir-7542d.appspot.com/o/vids%2FGrand%20Stairway%20at%20Grand%20Egyptian%20Museum%20-%20Alan%20Boyle%20(1080p%2C%20h264).mp4?alt=media&token=a6fadc17-41d1-43d1-ad18-258baade169e",
+    url: "https://www.pexels.com/download/video/32537398/",
   },
   {
     title: "Tutankhamun Immersive Exhibition",
-    url: "https://firebasestorage.googleapis.com/v0/b/fir-7542d.appspot.com/o/vids%2FTutankhamun%20Immersive%20Exhibition.mp4?alt=media&token=682484b2-7ab6-4490-8c4b-4c78979fecd1",
+    url: "https://www.pexels.com/download/video/2712594/",
   },
   {
     title: "The Official GEM Shop",
-    url: "https://firebasestorage.googleapis.com/v0/b/fir-7542d.appspot.com/o/vids%2FThe%20Official%20GEM%20Shop%20-%20Grand%20Egyptian%20Museum%20(1080p%2C%20h264).mp4?alt=media&token=72d3287f-66f6-4918-a298-f7410298be57",
+    url: "https://www.pexels.com/download/video/36134690/",
   },
 ];
 
@@ -106,7 +106,10 @@ export default function Videos() {
           selected === null ? "opacity-100" : "opacity-0"
         }`}
       >
-        <Typo className="relative text-secondary text-8xl text-center mt-20">
+        <Typo
+          font="h1"
+          className="relative text-secondary text-8xl text-center mt-20"
+        >
           Quik tour inside GEM
         </Typo>
         <div className="flex items-center gap-2">
@@ -125,7 +128,9 @@ export default function Videos() {
         <div
           key={index}
           className={`h-full object-cover duration-1000 relative overflow-hidden ${
-            selected !== null && selected !== index ? "w-0 z-10" : "w-full z-0"
+            selected !== null && selected !== index
+              ? "w-[0%] z-10"
+              : "w-[100%] z-0"
           }`}
         >
           <div
@@ -215,13 +220,13 @@ export default function Videos() {
 
             {/* Mute & Close */}
             <div className="flex items-center">
-              <button
+              {/* <button
                 onClick={handleMute}
                 className="w-10 h-10 text-xs relative text-primary flex justify-center items-center duration-500"
               >
                 <span className="w-full h-full border border-secondary bg-neutral-900/15 rotate-45 absolute top-0 left-0 -z-10" />
                 {isMuted ? <GoMute /> : <GoUnmute />}
-              </button>
+              </button> */}
               <button
                 onClick={handleClose}
                 className="w-10 h-10 text-xs relative text-primary flex justify-center items-center duration-500 ml-4"

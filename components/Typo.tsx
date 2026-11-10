@@ -2,28 +2,31 @@
 import { Fonts } from "@/lib/fonts";
 import React from "react";
 import { motion } from "framer-motion";
+import Dot from "./Dot";
 
 type Direction = "top" | "left" | "right" | "bottom" | "none";
 
 export default function Typo({
   className,
+  style,
   children,
   font,
   direction = "bottom",
   delay = 0,
 }: {
   className?: string;
+  style?: React.CSSProperties;
   children: React.ReactNode;
-  font?: "h1" | "h2" | "p" | "base";
+  font?: "h1" | "h2" | "p" | "base" | "span";
   direction?: Direction;
   delay?: number;
 }) {
   const fontClass =
-    font === "h2"
-      ? Fonts.header2.className
-      : font === "p"
-      ? Fonts.base.className
-      : Fonts.header1.className;
+    font === "h1"
+      ? Fonts.header1.className
+      : font === "h2"
+        ? Fonts.header2.className
+        : Fonts.base.className;
 
   const getInitialPosition = (dir: Direction) => {
     switch (dir) {
@@ -66,8 +69,17 @@ export default function Typo({
         ${font === "p" ? "md:text-sm text-xs" : ""}
         ${className} 
       `}
+      style={style}
     >
-      {children}
+      {font === "span" ? (
+        <span
+          className={`flex items-center gap-2 text-sm font-semibold text-secondary ${Fonts.header1.className}`}
+        >
+          <Dot /> {children}
+        </span>
+      ) : (
+        children
+      )}
     </motion.div>
   );
 }

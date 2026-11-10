@@ -18,7 +18,6 @@ export default function PageTransition({
             opacity: 1,
             transition: { delay: 1, duration: 1, ease: "easeInOut" },
           }}
-          className="w-screen absolute -z-10"
         >
           {children}
         </motion.div>

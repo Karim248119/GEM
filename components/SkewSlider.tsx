@@ -87,7 +87,10 @@ const SkewSlider = ({ images }: { images: Photo[] }) => {
       ref={containerRef}
       className="relative overflow-hidden w-full h-[100vh] text-primary py-32"
     >
-      <Typo className="text-secondary px-5 w-full md:w-2/3 text-center md:text-6xl text-4xl mx-auto absolute top-[10vh] left-1/2 !-translate-x-1/2">
+      <Typo
+        font="h1"
+        className="text-secondary px-5 w-full md:w-2/3 text-center md:text-6xl text-4xl mx-auto absolute top-[10vh] left-1/2 !-translate-x-1/2"
+      >
         Discover some of the Masterpieces of the Egyptian Museum
       </Typo>
       <div
@@ -105,11 +108,11 @@ const SkewSlider = ({ images }: { images: Photo[] }) => {
             key={idx}
             className="relative h-[50vh] group"
           >
-            <button className="h-0 -rotate-45 group-hover:h-[15vh] arrowbtn overflow-hidden !aspect-square absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 border-2 border-secondary duration-500">
+            {/* <button className="h-0 -rotate-45 group-hover:h-[15vh] arrowbtn overflow-hidden !aspect-square absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 border-2 border-secondary duration-500">
               <div className="w-full h-full relative p-5 flex items-center justify-center">
                 <PiArrowRightThin className=" arrow text-5xl" />
               </div>
-            </button>
+            </button> */}
             <img
               src={photo.url}
               alt={photo.title}

@@ -9,7 +9,7 @@ const header1 = localFont({
 const header2 = localFont({
   src: "./fonts/Sephir-Regular.otf",
 });
-const base2 = localFont({ src: "./fonts/Sephir-Regular.otf" });
+const AR = localFont({ src: "./fonts/AR4.ttf" });
 
 const base = Quicksand({
   subsets: ["latin"],
@@ -23,4 +23,5 @@ export const Fonts = {
   header2,
   raccosetta,
   letter,
+  AR,
 };

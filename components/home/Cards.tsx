@@ -28,7 +28,7 @@ export default function Cards() {
               className="w-full flex flex-col justify-center items-center relative"
             >
               <div
-                className={`h-[40vh] aspect-square flex flex-col justify-center items-center gap-4 bg-secondary text-primary shape`}
+                className={`h-[40vh] aspect-square flex flex-col justify-center items-center gap-4 bg-secondary text-primary shape pr-10 pb-5`}
               >
                 {index === 1 && (
                   <div className="w-[calc(100%-4px)] aspect-square -z-10 shape bg-neutral-900 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
@@ -60,7 +60,10 @@ export default function Cards() {
           );
         })}
       </div>
-      <Typo className="md:text-6xl text-3xl text-center text-secondary px-5">
+      <Typo
+        font="h1"
+        className="md:text-6xl text-3xl text-center text-secondary px-5"
+      >
         More than just a museum
       </Typo>
     </div>
